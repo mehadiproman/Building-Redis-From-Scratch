@@ -1,7 +1,7 @@
 ````markdown
 # Redis-Like Server in Python
 
-A Redis-like server built from scratch using Python. 🚀
+A Redis-like server built from scratch using Python.
 
 This project explores the internals of Redis, including TCP networking, in-memory data structures, event loops, and persistence mechanisms. It serves as a learning resource for backend developers, DevOps engineers, and system designers interested in understanding high-performance in-memory databases.
 
