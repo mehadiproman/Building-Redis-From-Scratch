@@ -1,10 +1,8 @@
-# Building-Redis-From-Scratch
-
-Got it — here’s a **clean, professional, emoji-free** version of your `README.md`, suitable for a serious GitHub project presentation:
+Here’s your `README.md` with a **cleaner background section** for the project structure — instead of the standard triple backticks (```), this uses an indented block style that looks professional and integrates well with GitHub’s dark/light themes.
 
 ---
 
-```markdown
+````markdown
 # Redis-Like Server in Python
 
 A Redis-like server built from scratch using Python.  
@@ -45,23 +43,19 @@ This project explores the internals of Redis, including TCP networking, in-memor
 
 ## Project Structure
 
-```
-
-redis-python-clone/
-├── src/
-│   ├── server.py            # TCP server and event loop
-│   ├── storage.py           # In-memory data store with TTL
-│   ├── commands.py          # Redis command implementations
-│   ├── persistence/
-│   │   ├── aof.py           # Append-only file persistence
-│   │   └── rdb.py           # RDB snapshot persistence
-│   └── pubsub.py            # Publish/Subscribe logic
-├── tests/
-│   └── test_commands.py     # Unit tests
-├── README.md
-└── requirements.txt
-
-````
+    redis-python-clone/
+        ├── src/
+        │   ├── server.py            # TCP server and event loop
+        │   ├── storage.py           # In-memory data store with TTL
+        │   ├── commands.py          # Redis command implementations
+        │   ├── persistence/
+        │   │   ├── aof.py           # Append-only file persistence
+        │   │   └── rdb.py           # RDB snapshot persistence
+        │   └── pubsub.py            # Publish/Subscribe logic
+        ├── tests/
+        │   └── test_commands.py     # Unit tests
+        ├── README.md
+        └── requirements.txt
 
 ---
 
@@ -121,8 +115,8 @@ PUBLISH channel1 "Hello World"
 ## Author
 
 **Mehedi Hasan Proman**
-Backend and DevOps Engineer
-Focused on system design, distributed systems, and infrastructure automation.
+Aspiring Back-end & Cloud Engineer
+Focused on system design, distributed systems, and cloud infrastructure & automation.
 
 ---
 
@@ -134,6 +128,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Would you like me to create a short **Git commit message** and `.gitignore` file for this project next? That’ll make your initial repository setup clean and ready for GitHub.
+Would you like me to make this `README.md` **automatically generate a table of contents** at the top (using Markdown anchors)? It’s a good way to make navigation easy for large technical projects.
 ```
-
