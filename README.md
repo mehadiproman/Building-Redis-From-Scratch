@@ -40,7 +40,6 @@ This project explores the internals of Redis, including TCP networking, in-memor
 
 ## Project Structure
 
-```bash
 redis-python-clone/
 ├── src/
 │   ├── server.py           # TCP server and event loop
