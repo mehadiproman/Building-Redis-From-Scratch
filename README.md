@@ -9,13 +9,13 @@ This project explores the internals of Redis, including TCP networking, in-memor
 
 ## Features
 
--   **Minimal TCP Server**: Built from the ground up using Python's native `socket` module.
--   **Event Loop**: A single-threaded, non-blocking event loop to handle multiple client connections concurrently.
--   **In-Memory Storage**: A dictionary-based data store with support for Time-To-Live (TTL) and background key expiration.
--   **AOF Persistence**: Append-Only File (AOF) persistence to log every write operation.
--   **RDB Persistence**: RDB-style snapshotting for point-in-time backups.
--   **Native Data Structures**: Implementation of core Redis data types (e.g., Strings, Lists).
--   **Publish/Subscribe**: A messaging system allowing clients to subscribe to channels and receive messages.
+-   Minimal TCP Server: Built from the ground up using Python's native `socket` module.
+-   Event Loop: A single-threaded, non-blocking event loop to handle multiple client connections concurrently.
+-   In-Memory Storage: A dictionary-based data store with support for Time-To-Live (TTL) and background key expiration.
+-   AOF Persistence: Append-Only File (AOF) persistence to log every write operation.
+-   RDB Persistence: RDB-style snapshotting for point-in-time backups.
+-   Native Data Structures: Implementation of core Redis data types (e.g., Strings, Lists).
+-   Publish/Subscribe: A messaging system allowing clients to subscribe to channels and receive messages.
 
 ---
 
@@ -31,10 +31,10 @@ This project explores the internals of Redis, including TCP networking, in-memor
 
 ## Tech Stack
 
--   **Language**: Python 3
--   **Core Modules**: `socket`, `select`, `threading`, `json`, `time`, `os`
--   **Testing Framework**: `pytest`
--   **Persistence**: Custom AOF and RDB logic
+-   Language: Python3
+-   Core Modules: `socket`, `select`, `threading`, `json`, `time`, `os`
+-   Testing Framework: `pytest`
+-   Persistence: Custom AOF and RDB logic
 
 ---
 
