@@ -1,6 +1,3 @@
-Here’s your `README.md` with a **cleaner background section** for the project structure — instead of the standard triple backticks (```), this uses an indented block style that looks professional and integrates well with GitHub’s dark/light themes.
-
----
 
 ````markdown
 # Redis-Like Server in Python
@@ -126,7 +123,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ```
 
----
-
-Would you like me to make this `README.md` **automatically generate a table of contents** at the top (using Markdown anchors)? It’s a good way to make navigation easy for large technical projects.
-```
