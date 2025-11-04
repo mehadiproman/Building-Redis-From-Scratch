@@ -15,24 +15,21 @@ class TCPServer:
         buffer = ""  # Buffer to accumulate characters
         try:
             while True:
-                try:
-                    data = conn.recv(1024).decode(errors='ignore')
-                    if not data:
-                        break
+                data = conn.recv(1024).decode(errors='ignore')
+                if not data:
+                    break
 
-                    buffer += data  # accumulate characters
-                    while "\n" in buffer:  # process full lines only
-                        line, buffer = buffer.split("\n", 1)
-                        line = line.strip()  # remove whitespace and \r
-                        if not line:
-                            continue
+                buffer += data  # accumulate characters
+                while "\n" in buffer:  # process full lines only
+                    line, buffer = buffer.split("\n", 1)
+                    line = line.strip()  # remove whitespace and \r
+                    if not line:
+                        continue
 
-                        if line.upper() == "PING":
-                            conn.sendall(b"+PONG\r\n")
-                        else:
-                            conn.sendall(b"-ERR Unknown command\r\n")
-                except (ConnectionResetError, BrokenPipeError):
-                    break  # Exit the loop if the client disconnects
+                    if line.upper() == "PING":
+                        conn.sendall(b"+PONG\r\n")
+                    else:
+                        conn.sendall(b"-ERR Unknown command\r\n")
         except Exception as e:
             print(f"Error with {addr}: {e}", flush=True)
         finally:
@@ -42,12 +39,9 @@ class TCPServer:
     def run(self):
         try:
             while True:
-                try:
-                    conn, addr = self.server_socket.accept()
-                    thread = threading.Thread(target=self.handle_client, args=(conn, addr), daemon=True)
-                    thread.start()
-                except OSError:
-                    break # Exit the loop if the socket is closed
+                conn, addr = self.server_socket.accept()
+                thread = threading.Thread(target=self.handle_client, args=(conn, addr), daemon=True)
+                thread.start()
         except KeyboardInterrupt:
             print("\nShutting down server...", flush=True)
         finally:
