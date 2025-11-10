@@ -20,13 +20,13 @@ class RedisLikeServer:  # Defines the main class for our Redis-like server
         # Create a TCP socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Create a new TCP/IP socket
         # Allow reuse of the same address after restart
-        self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allows the socket to be reused immediately after it's closed
+        self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Allows the socket to be reused immediately after it's closed - Server বন্ধ → আবার চালালে port reuse করা যাবে
         # Set non-blocking mode
-        self.server_socket.setblocking(False)  # Set the socket to non-blocking mode to handle multiple clients
+        self.server_socket.setblocking(False)  # Set the socket to non-blocking mode to handle multiple clients - Socket non-blocking → একাধিক client handle সম্ভব
         # Bind to the specified host and port
         self.server_socket.bind((self.host, self.port))  # Bind the socket to the configured host and port
         # Start listening for incoming connections
-        self.server_socket.listen(128)  # Listen for incoming connections, with a backlog of 128
+        self.server_socket.listen(128)  # Listen for incoming connections, with a backlog of 128 - Client accept করার জন্য queue তৈরি (max 128 waiting client)
 
         print(f"Single-threaded Redis-like server listening on {self.host}:{self.port}")  # Print a message indicating the server is running
         self._event_loop()  # Start the main event loop
